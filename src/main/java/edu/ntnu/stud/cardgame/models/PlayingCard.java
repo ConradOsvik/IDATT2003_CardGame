@@ -1,9 +1,9 @@
 package edu.ntnu.stud.cardgame.models;
 
 /**
- * Represents a playing card. A playing card has a number (face) between
- * 1 and 13, where 1 is called an Ace, 11 = Knight, 12 = Queen and 13 = King.
- * The card can also be one of 4 suits: Spade, Heart, Diamonds and Clubs.
+ * Represents a playing card. A playing card has a number (face) between 1 and 13, where 1 is called
+ * an Ace, 11 = Knight, 12 = Queen and 13 = King. The card can also be one of 4 suits: Spade, Heart,
+ * Diamonds and Clubs.
  *
  * @author ntnu
  * @version 2021-03-13
@@ -14,15 +14,14 @@ public class PlayingCard {
   private final int face; // a number between 1 and 13
 
   /**
-   * Creates an instance of a PlayingCard with a given suit and face.
-   * The face value is an integer between 1 and 13, where 11 represents the jack,
-   * 12 represents the queen and 13 represents the king. The Ace is represented by the
-   * number 1.
+   * Creates an instance of a PlayingCard with a given suit and face. The face value is an integer
+   * between 1 and 13, where 11 represents the jack, 12 represents the queen and 13 represents the
+   * king. The Ace is represented by the number 1.
    *
    * <p>If the suit or face are invalid, an {@code IllegalArgumentException} is thrown.</p>
    *
-   * @param suit The suit of the card, as a single character. 'S' for Spades,
-   *             'H' for Heart, 'D' for Diamonds and 'C' for clubs
+   * @param suit The suit of the card, as a single character. 'S' for Spades, 'H' for Heart, 'D' for
+   *             Diamonds and 'C' for clubs
    * @param face The face value of the card, an integer between 1 and 13
    * @throws IllegalArgumentException if suit or face have invalid values.
    */
@@ -40,18 +39,8 @@ public class PlayingCard {
   }
 
   /**
-   * Returns the suit and face of the card as a string.
-   * A 4 of hearts is returned as the string "H4".
-   *
-   * @return the suit and face of the card as a string
-   */
-  public String getAsString() {
-    return String.format("%s%s", suit, face);
-  }
-
-  /**
-   * Returns the suit of the card, 'S' for Spades, 'H' for Heart,
-   * 'D' for Diamonds and 'C' for clubs.
+   * Returns the suit of the card, 'S' for Spades, 'H' for Heart, 'D' for Diamonds and 'C' for
+   * clubs.
    *
    * @return the suit of the card
    */
@@ -66,6 +55,27 @@ public class PlayingCard {
    */
   public int getFace() {
     return face;
+  }
+
+  @Override
+  public String toString() {
+    String faceValue = switch (face) {
+      case 1 -> "ace";
+      case 11 -> "jack";
+      case 12 -> "queen";
+      case 13 -> "king";
+      default -> String.valueOf(face);
+    };
+
+    String suitValue = switch (suit) {
+      case 'H' -> "hearts";
+      case 'D' -> "diamonds";
+      case 'C' -> "clubs";
+      case 'S' -> "spades";
+      default -> throw new IllegalArgumentException("Invalid suit");
+    };
+
+    return String.format("%s_of_%s", faceValue, suitValue);
   }
 
   @Override
