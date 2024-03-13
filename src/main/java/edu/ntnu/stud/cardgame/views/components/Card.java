@@ -18,7 +18,6 @@ public class Card extends BorderPane {
 
   public Card(String cardName) {
     super();
-    this.setId("card");
     Image image = new Image(
         Objects.requireNonNull(getClass().getResourceAsStream("/cards/" + cardName + ".png")));
     ImageView imageView = new ImageView(image);
