@@ -1,0 +1,25 @@
+#title{
+  -fx-font-size: 60px;
+  -fx-font-weight: bold;
+}
+
+#ui-button{
+  -fx-background-color: #009FB7;
+  -fx-text-fill: white;
+  -fx-font-size: 16px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 5px;
+  -fx-border-radius: 5px;
+  -fx-padding: 15px;
+  -fx-background-insets: 5px;
+  -fx-cursor: hand;
+}
+
+#ui-button:hover{
+  -fx-background-color: #007C8F;
+}
+
+#card{
+  -fx-font-size: 80px;
+  -fx-font-weight: bold;
+}
