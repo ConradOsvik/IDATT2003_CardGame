@@ -22,4 +22,11 @@
 #card{
   -fx-font-size: 80px;
   -fx-font-weight: bold;
+  -fx-pref-width: 200px;
+  -fx-pref-height: 300px;
+  -fx-border-color: #E6E6EA;
+  -fx-border-width: 1px;
+  -fx-border-radius: 10px;
+  -fx-padding: 10px;
+  -fx-border-insets: 10px;
 }
