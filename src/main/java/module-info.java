@@ -13,4 +13,6 @@ module edu.ntnu.stud.cardgame {
 
   opens edu.ntnu.stud.cardgame to javafx.fxml;
   exports edu.ntnu.stud.cardgame;
+  exports edu.ntnu.stud.cardgame.controllers;
+  opens edu.ntnu.stud.cardgame.controllers to javafx.fxml;
 }
