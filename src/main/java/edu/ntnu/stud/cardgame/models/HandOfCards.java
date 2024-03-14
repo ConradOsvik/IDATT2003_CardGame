@@ -10,4 +10,13 @@ public class HandOfCards {
   public PlayingCard[] getHand(){
     return this.cards;
   }
+
+  public boolean isFlush(){
+    for(int i = 1; i < cards.length; i++){
+      if(cards[i].getSuit() != cards[0].getSuit()){
+        return false;
+      }
+    }
+    return true;
+  }
 }
