@@ -4,9 +4,6 @@ package edu.ntnu.stud.cardgame.models;
  * Represents a playing card. A playing card has a number (face) between 1 and 13, where 1 is called
  * an Ace, 11 = Knight, 12 = Queen and 13 = King. The card can also be one of 4 suits: Spade, Heart,
  * Diamonds and Clubs.
- *
- * @author ntnu
- * @version 2021-03-13
  */
 public class PlayingCard {
 

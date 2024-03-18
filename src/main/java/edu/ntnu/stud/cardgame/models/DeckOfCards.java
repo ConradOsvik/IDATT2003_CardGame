@@ -3,12 +3,20 @@ package edu.ntnu.stud.cardgame.models;
 import java.util.ArrayList;
 import java.util.Random;
 
+/**
+ * This class represents a deck of playing cards. It contains 52 cards, one for each combination of
+ * the four suits and thirteen faces.
+ */
 public class DeckOfCards {
 
   private final Random rand = new Random();
   private final char[] suits = {'S', 'H', 'D', 'C'};
   private final PlayingCard[] cards = new PlayingCard[52];
 
+  /**
+   * Constructs a new deck of cards. The deck is initially ordered from Ace of Spades to King of
+   * Clubs.
+   */
   public DeckOfCards() {
     for (int i = 0; i < suits.length; i++) {
       char suit = suits[i];
@@ -18,6 +26,12 @@ public class DeckOfCards {
     }
   }
 
+  /**
+   * Deals a hand of n cards from the deck. The cards are chosen randomly from the deck.
+   *
+   * @param n the number of cards to deal
+   * @return a hand of n cards
+   */
   public HandOfCards dealHand(int n) {
     ArrayList<PlayingCard> hand = new ArrayList<>();
 
