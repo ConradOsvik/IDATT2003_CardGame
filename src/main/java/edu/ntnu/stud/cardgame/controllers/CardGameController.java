@@ -30,7 +30,7 @@ public class CardGameController {
     int sum = Arrays.stream(hand.getHand()).mapToInt(PlayingCard::getFace).sum();
     PlayingCard[] hearts = Arrays.stream(hand.getHand()).filter(card -> card.getSuit() == 'H').toArray(PlayingCard[]::new);
     boolean containsSpadesQueen = Arrays.stream(hand.getHand()).anyMatch(card -> card.getSuit() == 'S' && card.getFace() == 12);
-    boolean isFLush = hand.isFlush();
+    boolean isFlush = hand.isFlush();
 
     this.view.updateResult(sum, hearts, containsSpadesQueen, isFLush);
   }
