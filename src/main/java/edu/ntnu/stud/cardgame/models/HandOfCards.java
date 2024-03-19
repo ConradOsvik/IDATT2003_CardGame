@@ -13,6 +13,10 @@ public class HandOfCards {
    * @param cards the array of playing cards that make up the hand
    */
   public HandOfCards(PlayingCard[] cards) {
+    if (cards == null) {
+      throw new IllegalArgumentException("Parameter cards must not be null");
+    }
+
     this.cards = cards;
   }
 

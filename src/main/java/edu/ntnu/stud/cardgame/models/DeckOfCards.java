@@ -33,6 +33,8 @@ public class DeckOfCards {
    * @return a hand of n cards
    */
   public HandOfCards dealHand(int n) {
+    if(n < 1) throw new IllegalArgumentException("Number of cards must be positive");
+
     ArrayList<PlayingCard> hand = new ArrayList<>();
 
     for (int i = 0; i < n; i++) {
